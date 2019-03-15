@@ -13,10 +13,7 @@ PluginAlgorithm::PluginAlgorithm() { configureDefaults(); }
 
 bool PluginAlgorithm::createCompatible(const DataList& data, Algorithm** a) {
   // Check requirements to create the algorithm
-  if (data.size() != 0) {
-    return false;
-  }  // TODO what is this actually checking? Does it avoid to create READ
-     // plugins on un-empty data?
+  if (data.size() != 0) { return false; }
 
   // Requirements are met, create the algorithm if asked
   if (a) { *a = new PluginAlgorithm(); }  // TODO is this disposed by someone?

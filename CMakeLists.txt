@@ -1,7 +1,5 @@
 cmake_minimum_required(VERSION 3.3.0)
-
-message("Building ImFusion Demo Plugin")
-project(Demo)
+project(demo_plugin)
 
 find_package(ImFusionLib REQUIRED)
 
@@ -24,14 +22,14 @@ set(PLUGIN_SOURCES
 )
 
 set(PLUGIN_HEADERS
-        include/demo_plugin/algorithm.hpp
-        include/demo_plugin/controller.hpp
-        include/demo_plugin/factory.hpp
-        include/demo_plugin/plugin.hpp
+        include/${PROJECT_NAME}/algorithm.hpp
+        include/${PROJECT_NAME}/controller.hpp
+        include/${PROJECT_NAME}/factory.hpp
+        include/${PROJECT_NAME}/plugin.hpp
 )
 
 # Define target library
-add_library(${PROJECT_NAME} SHARED ${PLUGIN_SOURCES} ${PLUGIN_FORMS} ${PLUGIN_HEADERS})
+add_library(${PROJECT_NAME} SHARED ${PLUGIN_SOURCES} ${PLUGIN_HEADERS})
 set_target_properties(${PROJECT_NAME} PROPERTIES CXX_STANDARD 14)
 
 target_include_directories(${PROJECT_NAME} PRIVATE include ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR})
@@ -39,7 +37,7 @@ target_include_directories(${PROJECT_NAME} PRIVATE include ${CMAKE_CURRENT_SOURC
 # Link agains the ImFusionLib and selected modules/plugins. If other modules are needed, add them to your Plugin.
 target_link_libraries(${PROJECT_NAME} PRIVATE ImFusionLib)
 
-# Define output target directories
+# Check if this is needed, how this is provided or how this should be provided.
 imfusion_set_common_target_properties()
 imfusion_provide_ide_instructions()
 

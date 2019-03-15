@@ -1,0 +1,29 @@
+---
+BasedOnStyle:  Google
+Cpp11BracedListStyle: 	true
+Standard: 		Cpp11
+
+IndentWidth:     2
+TabWidth:        2
+UseTab:          Never
+
+AccessModifierOffset: 			-2
+ConstructorInitializerIndentWidth: 	2
+AlignEscapedNewlinesLeft: 		false
+AlignTrailingComments: 			true
+
+SortIncludes: true
+
+AllowAllParametersOfDeclarationOnNextLine: 	false
+AllowShortBlocksOnASingleLine: 			true
+AllowShortIfStatementsOnASingleLine: 		true
+AllowShortLoopsOnASingleLine: 			true
+AllowShortLoopsOnASingleLine: 			true
+AllowShortFunctionsOnASingleLine: 		All
+AlwaysBreakBeforeMultilineStrings: 		false
+
+ColumnLimit: 120
+
+BreakConstructorInitializers: 			BeforeComma
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
+

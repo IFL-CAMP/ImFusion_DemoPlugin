@@ -16,6 +16,7 @@ public:
 
 class PluginControllerFactory : public AlgorithmControllerFactory {
 public:
+  virtual ~PluginControllerFactory() override = default;
   virtual ImFusion::AlgorithmController* create(ImFusion::Algorithm* a) const override;
 };
 
