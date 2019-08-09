@@ -22,7 +22,7 @@ make
 You can easily create a new plugin for ImFusionSuite using this one as a starting point.
 For instance, if you want to create a plugin called `MyAmazingPlugin`, these are the required steps:
 
-- Copy the entire repo and change the root folde name to `MyAmazingPlugin`
+- Copy the entire repo and change the root folder name to `MyAmazingPlugin`
 - Rename the folder `include/demo_plugin` to `include/my_amazing_plugin`
 - In every .hpp and .cpp file, rename the defined namespace to `namespace MyAmazingPlugin`
 
